@@ -16,8 +16,15 @@ def trapezium_area(a, b, h):
 
 
 def ellipse_area(a, b):
-    return pi * a * b
+    if all(isinstance(x, (int, float)) and x >= 0 for x in [a, b]):
+        return pi * a * b
+    else:
+        raise ValueError("Invalid radius. Must be a non-negative number.")
 
 
 def rhombus_area(d1, d2):
-    return 0.5 * d1 * d2
+    if all(isinstance(x, (int, float)) and x >= 0 for x in [d1, d2]):
+        return 0.5 * d1 * d2
+    else:
+        raise ValueError("Invalid radius. Must be a non-negative number.")
+
