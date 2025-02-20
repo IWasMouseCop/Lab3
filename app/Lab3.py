@@ -9,7 +9,10 @@ def circle_area(r):
 
 
 def trapezium_area(a, b, h):
-    return 0.5 * (a + b) * h
+    if all(isinstance(x, (int, float)) and x >= 0 for x in [a, b, h]):
+        return 0.5 * (a + b) * h
+    else:
+        raise ValueError("Invalid radius. Must be a non-negative number.")
 
 
 def ellipse_area(a, b):
