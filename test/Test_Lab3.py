@@ -17,5 +17,8 @@ class TestShapes(unittest.TestCase):
         with self.assertRaises(ValueError):
             circle_area(-1)
 
+    def test_trapezium_area_valid(self):
+        self.assertAlmostEqual()
+
 if __name__ == "__main__":
     unittest.main()
